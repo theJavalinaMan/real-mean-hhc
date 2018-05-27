@@ -1,0 +1,269 @@
+<!-- Carousel Starts-->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <video id="vid" class="d-block w-100" alt="First Slide" loop autoplay muted>
+                <source src="assets/video/qualityVideo.mp4" type="video/mp4">
+            </video>
+            <div class="carousel-caption" style="top:-3%; background-color:rgba(45,36,36,0.5); max-height:150px;">
+                <h2 class="font-weight-bold shrinkTest shrinkVideoTitle" style="color:white;padding-top:5px;">봉사는행사가 아니라 일상입니다</h2>
+                <h5 class="font-weight-bold shrinkTest shrinkVideoSubTitle" style="color:white;">Service is not an
+                    event, but an everyday life.</h5>
+                <button class="btn btn-warning text-primary font-weight-bold shrinkTest shrinkButtonText">참여하기</button>
+            </div>
+            <div class="carousel-caption" style="right:-60%;">
+                <button class="btn btn-lg btn-secondary shrinkButtonText shrinkTest"
+                        style="background-color:rgba(255, 255, 255, 0.2);color:black; z-index:3;" id="soundButton"
+                        ng-click="toggleSound = !toggleSound; soundButton();">
+                    <i ng-class="toggleSound ? 'fas fa-volume-up' : 'fas fa-volume-off'"></i>
+                </button>
+                <button class="btn btn-lg btn-secondary shrinkTest shrinkButtonText"
+                        style="background-color:rgba(255, 255, 255, 0.2);color:black;" id="playButton"
+                        ng-click="togglePlay = !togglePlay; playButton();">
+                    <i ng-class="togglePlay ? 'far fa-play-circle' : 'far fa-pause-circle'"></i>
+                </button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" ng-src="assets/img/3F8A9043.JPG" alt="Second slide">
+            <div class="carousel-caption" style="top:33%;">
+                <h2 class="font-weight-bold shrinkVideoTitle shrinkTest" style="color:black;">ENGLISH CONNECT</h2>
+                <h5 class="font-weight-bold shrinkTest shrinkVideoSubTitle" style="color:black;">원어민 선생님보다 "원어민 친구"가
+                    되고싶어요.</h5>
+                <p style="color:black;" class="shrinkTest shrinkParagraphText">Sometimes you learn better from a
+                    "friend" than a teacher.</p>
+                <button class="btn btn-warning text-primary font-weight-bold shrinkTest shrinkButtonText">참여하기</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100"
+                 ng-src="assets/img/romania-classrooms-praying-teaching-learning-1407576-wallpaper.jpg"
+                 alt="Third slide">
+            <div class="carousel-caption" style="top:33%;">
+                <h2 class="font-weight-bold shrinkTest shrinkVideoTitle" style="color:black;">혜화센터</h2>
+                <h5 class="font-weight-bold shrinkTest shrinkVideoSubTitle" style="color:black;">연인, 친구, 가족들의 쉼터가되고
+                    싶어요.</h5>
+                <p style="color:black;" class="shrinkParagraphText">Above all, we would like to be a shelter for all of
+                    you.</p>
+                <button class="btn btn-warning text-primary font-weight-bold shrinkTest shrinkButtonText">참여하기</button>
+            </div>
+        </div>
+    </div>
+    <span class="carousel-control-prev" ng-href="#carouselExampleIndicators" ng-click="carouselButton();" role="button"
+          data-slide="prev" style="height:10%; background-color:rgba(45, 36, 36, 0.5);">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </span>
+    <span class="carousel-control-next" ng-href="#carouselExampleIndicators" ng-click="carouselButton();" role="button"
+          data-slide="next" style="height:10%; background-color:rgba(45,36,36,0.5);">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </span>
+</div>
+<!-- Carousel Ends-->
+
+<!-- Middle Bar -->
+<div class="card bg-primary text-white">
+    <div class="card-body">
+        <h1 class="card-title text-center shrinkTest shrinkVideoTitle">우리는<span class="text-warning">도움의 손길</span> 입니다.
+        </h1>
+        <p class="card-text text-center text-light">Wherever Whenever</p>
+    </div>
+</div>
+<!-- End Middle Bar -->
+<h1 class="font-weight-bold text-center">프로그램</h1>
+<!-- Cards Start -->
+
+<div class="card-deck" style="padding-left:15%; padding-right:15%; padding-bottom:5%;">
+    <div class="card">
+        <img class="card-img-top" ng-src="assets/img/romania-classrooms-praying-teaching-learning-1407576-wallpaper.jpg"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">이음</h5>
+            <h6>EnglishConnect</h6>
+            <p class="card-text">전국의 무료 영어회화 교실의 원어민 선교사와 이어주고, 더 나은 교육의 기회로 연결되도록 도와줍니다.</p>
+        </div>
+        <div class="card-footer text-center">
+            <a href="#">자세히 보기 ></a></div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" ng-src="assets/img/sister-missionaries.jpg"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">세움</h5>
+            <h6>Self-Reliance</h6>
+            <p class="card-text">자기 계발을 위한 목표를 세우고, 취업/창업 컨설팅을 통해 스스로 설기회를 갖습니다.</p>
+        </div>
+        <div class="card-footer text-center">
+            <a href="#">6월 런칭 예정</a></div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" ng-src="assets/img/mom-hug.jpg"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">찾음</h5>
+            <h6>Family</h6>
+            <p class="card-text">세대를 초월하여 가족의 소중함을 발견하고 가정의 행복을 찾도록 도와줍니다.</p>
+        </div>
+        <div class="card-footer text-center">
+            <a href="#">7월 런칭 예정</a></div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" ng-src="assets/img/karlson.JPG"
+             alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title font-weight-bold">나눔</h5>
+            <h6>JustServe</h6>
+            <p class="card-text">자신의 시간과 재능을 기부하고, 전세계의 헬핑핸즈들과 보사를 통해 우정을 나눕니다.</p>
+        </div>
+        <div class="card-footer text-center">
+            <a href="#">자세히 보기 ></a></div>
+    </div>
+</div>
+<!-- Cards End-->
+
+
+<!-- Section of  Touch tiles -->
+<div class="card" style="background-color:rgba(45,36,36,0.1); padding-top:5%;">
+
+    <!-- First Row -->
+    <div class="card-group" style="padding-left:15%; padding-right:15%;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">공지사항</h5>
+                <p class="card-text">평창의 붕어빵, 기억나세요? 혜화에서 아이스초코, 함께해요!~ 평창의 붕어빵, 기억나세요? 혜화에서 아이스초코, 함께해요!~</p>
+            </div>
+            <div class="text-right">
+                <a ng-href="#" style="padding-right:10%;padding-bottom:50%;">더보기 ></a>
+            </div>
+        </div>
+        <div class="card text-white">
+            <img class="card-img" ng-src="assets/img/teaching-with-ipad.jpg" alt="Card image">
+            <div class="card-img-overlay text-white" style="background-color:rgba(45, 36, 36,0.4)">
+                <h6 class="card-title">나에게맞는 헬핑핸즈 프로그램 찾기</h6>
+            </div>
+        </div>
+        <div class="card text-white">
+            <img class="card-img" ng-src="assets/img/helping-hands-girl.jpg" alt="Card image">
+            <div class="card-img-overlay text-white" style="background-color:rgba(45, 36, 36,0.4)">
+                <h6 class="card-title" style="padding-left:13%;">헬핑핸즈 이야기</h6>
+                <p class="card-text" style="padding-left:13%; font-size:12px;">참여하고 싶은 친구들에게<br> 언제나 열려있습니다.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End of First Row -->
+
+    <!-- Second Row -->
+    <div class="card-group" style="padding-left:15%; padding-right:15%; padding-bottom:5%;">
+        <div class="card" style="color:white;">
+            <img class="card-img-top" ng-src="assets/img/elder-deher.jpg" alt="Helping Hands Children's Day">
+            <div class="card-body" style="background-color:#4165B3;">
+                <h5 class="card-title">
+                    <a ng-href="https://www.facebook.com/helpinghandskor/">
+                        <i class="fab fa-facebook-square" style="color:white;"></i>
+                    </a>
+                </h5>
+                <p class="card-text">평창의 붕어빵, 기억나세요? 혜화에서 아이스초코, 함께해요!~</p>
+                <a ng-href="https://www.facebook.com/helpinghandskor" style="float:right; color:white;">자세히보기 ></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">선교사이야기</h5>
+                <p class="card-text">"아버지도 저도 한국과는<br> 인연이 깊은 것같아요."</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title font-weight-bold">헬핑핸즈센터이모저모</h5>
+            </div>
+        </div>
+    </div>
+    <!-- End of Second Row -->
+</div>
+<!-- Section of Touch Tiles End -->
+
+<!-- Start of Third row of Cards -->
+<div class="container" style="margin: auto; max-width: 72%;padding-top:5%;">
+    <div class="row row-eq-height">
+        <div class=" col-md-3" style="left:2%; color:white;background-color:grey;">
+            <h4 class="text-center">글로벌헬핑핸즈</h4>
+            <p>글로벌 핼핑핸즈 관련 설명</p>
+            <button class="btn btn-outline-light"
+                    style="min-width:100px;background-color:transparent; color:white;outline-color: white;">
+                <i class="fas fa-long-arrow-alt-right" style="float:right; min-width:75px;font-size:36px;"></i>
+            </button>
+        </div>
+        <div class="col-md-6">
+            <img ng-src="assets/img/africa-helping-hands-efforts.jpg" class="img-responsive" id="africanImage">
+        </div>
+        <div class="col-md-3" style="border:1px solid black; outline:1px solid grey;">
+            <h5 class="font-weight-bold">자료실</h5>
+            <p>평창의 붕어빵, 기억나세요?<br> 혜화에서 아이스초코, 함께해요!~<br> 평창의 붕어빵, 기억나세요?<br> 혜화에서 아이스초코, 함께해요!~<br>
+                평참의 붕어빵, 기억나세요?</p>
+            <div class="text-right">
+                <a ng-href="#" style="padding-right:10%;padding-bottom:50%; color:black;">더보기 ></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Third Row of Cards -->
+
+<!-- Start of Word Cloud -->
+<div class="card" style="padding-top:5%;">
+    <h1 class="card-title text-center shrinkTest shrinkVideoTitle font-weight-bold">키워드보는헬핑핸즈
+    </h1>
+    <div class="card-body">
+<div class="text-center">
+    <img class="rounded mx-auto d-block img-responsive img-fluid"  alt="Word Cloud" ng-src="assets/img/wordcloud.png" usemap="#wordCloudMap">
+</div>
+        <map name="wordCloudMap">
+            <area shape="rect" alt="96" href="http://www.helpinghands.center" coords="728,312,824,348"
+                  target="wordcloud">
+            <area shape="rect" alt="96" href="http://www.helpinghands.center" coords="704,348,800,376"
+                  target="wordcloud">
+            <area shape="rect" alt="96" href="http://www.helpinghands.center" coords="184,416,280,444"
+                  target="wordcloud">
+            <area shape="rect" alt="96" href="http://www.helpinghands.center" coords="524,272,620,300"
+                  target="wordcloud">
+            <area shape="rect" alt="56" href="http://www.helpinghands.center" coords="264,264,320,380"
+                  target="wordcloud">
+            <area shape="rect" alt="120" href="http://www.helpinghands.center" coords="484,300,604,328"
+                  target="wordcloud">
+            <area shape="rect" alt="144" href="http://www.helpinghands.center" coords="240,544,384,572"
+                  target="wordcloud">
+            <area shape="rect" alt="140" href="http://www.helpinghands.center" coords="180,380,320,408"
+                  target="wordcloud">
+            <area shape="rect" alt="136" href="http://www.helpinghands.center" coords="688,416,824,536"
+                  target="wordcloud">
+            <area shape="rect" alt="168" href="http://www.helpinghands.center" coords="668,376,836,404"
+                  target="wordcloud">
+            <area shape="rect" alt="56" href="http://www.lds.org/?lang=kor" coords="292,128,348,408"
+                  target="wordcloud">
+            <area shape="rect" alt="284" href="http://www.helpinghands.center" coords="604,616,888,684"
+                  target="wordcloud">
+            <area shape="rect" alt="272" href="http://www.helpinghands.center" coords="616,544,888,616"
+                  target="wordcloud">
+            <area shape="rect" alt="284" href="http://www.helpinghands.center" coords="332,632,616,704"
+                  target="wordcloud">
+            <area shape="rect" alt="144" href="http://www.helpinghands.center" coords="232,468,376,544"
+                  target="wordcloud">
+            <area shape="rect" alt="144" href="http://www.helpinghands.center" coords="336,560,480,644"
+                  target="wordcloud">
+            <area shape="rect" alt="148" href="http://www.helpinghands.center" coords="472,556,620,632"
+                  target="wordcloud">
+            <area shape="rect" alt="144" href="http://www.helpinghands.center" coords="448,324,592,404"
+                  target="wordcloud">
+            <area shape="rect" alt="320" href="http://www.helpinghands.center" coords="372,480,692,560"
+                  target="wordcloud">
+            <area shape="rect" alt="484" href="http://www.freetalkingwithamericans.kr" coords="268,404,752,484"
+                  target="wordcloud">
+        </map>
+    </div>
+</div>
+<!-- End of Word Cloud

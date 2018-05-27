@@ -1,0 +1,73 @@
+/* app css stylesheet */
+.navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+}
+.navbar-nav > li{
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.shrinkTest {
+  /* linearly increase the font-size from 16->32px
+     between a viewport width of 600px-> 1200px  */
+@include fluid-type(font-size, 600px, 1200px, 16px, 32px);
+}
+@media screen and (max-width: 600px) {
+  .shrinkVideoTitle {
+    font-size: 16px;
+  }
+    .shrinkVideoSubTitle{
+        font-size:10px;
+    }
+    .shrinkButtonText{
+        font-size:10px;
+        line-height:0.1;
+    }
+    .shrinkParagraphText{
+        font-size:8px;
+    }
+}
+@media screen and (min-width: 1200px) {
+  .shrinkVideoTitle {
+    font-size: 36px;
+  }
+    .shrinkVideoSubTitle{
+        font-size:24px;
+    }
+    .shrinkButtonText{
+        font-size:24px;
+        line-height:1.2;
+    }
+    .shrinkParagraphText{
+        font-size:20px;
+    }
+}
+.rotate-img{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+#africanImage{
+    width: 100%;
+    height: 100%;
+    background: url(assets/img/africa-helping-hands-efforts.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hoveringMenu:hover>.dropdown-menu {
+    display: block;
+}
+.hoveringMenu{
+    cursor:pointer;
+}
+.snsStyle{
+    color:white;
+    font-size:24px;
+}
+.snsButtons{
+    background-color:#484848;
+    border-radius:50px;
+}

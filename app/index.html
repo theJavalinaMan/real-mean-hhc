@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <!-- favicon nonsense -->
+    <meta content="assets/img/helpingHandsLogo.png" itemprop="image">
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>헬핑핸즈 센터</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<div ng-controller="mainCtrl" ng-cloak>
+    <!-- Menu Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EDEDED" id="menu">
+        <img class="navbar-brand mb-0" style="padding-left:5%;" id="#logo" src="assets/img/helpingHandsLogo.png"/>
+        <a ng-href="#!/view1" class="font-weight-bold text-primary">HELPING HANDS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float:right;">
+            <ul class="navbar-nav ml-auto text-primary">
+                <li class="nav-item dropdown text-primary hoveringMenu" id="menuItem1">
+                    <a class="nav-link dropdown-toggle  font-weight-bold" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false"
+                       ng-init="helpingHandsValue = false;" ng-mouseover="helpingHandsValue = true;"
+                       ng-mouseleave="helpingHandsValue = false;">
+                        {{ helpingHandsValue == true ? 'Helping Hands' : '헬핑핸즈' }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" ng-href="#">비전 (BI 포함)</a>
+                        <a class="dropdown-item " href="#!/view2">글로벌 헬핑핸즈</a>
+                        <a class="dropdown-item " href="#">사진으로 보는 헬핑핸즈</a>
+                        <a class="dropdown-item " href="#">오시는 길</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown hoveringMenu" id="menuItem2">
+                    <a class="nav-link dropdown-toggle  font-weight-bold" role="button"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false" ng-init="programValue = false;" ng-mouseover="programValue = true;"
+                       ng-mouseleave="programValue = false;">
+                        {{ programValue == true ? 'Program' : '프로그램' }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">이음</a>
+                        <a class="dropdown-item" href="#">세움</a>
+                        <a class="dropdown-item" href="#">찾음</a>
+                        <a class="dropdown-item" href="#">나눔</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown hoveringMenu" id="menuItem3">
+                    <a class="nav-link dropdown-toggle font-weight-bold" id="navbarDropdown"
+                       role="button"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false" ng-init="communityValue = false;" ng-mouseover="communityValue = true;"
+                       ng-mouseleave="communityValue = false;">
+                        {{communityValue == true ? 'Community' : '프로그램'}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">소식</a>
+                        <a class="dropdown-item" href="#">센터 이모저모</a>
+                        <a class="dropdown-item" href="#">선교사 이야기</a>
+                        <a class="dropdown-item" href="#">참여 후기</a>
+                        <a class="dropdown-item" href="#">Q&A</a>
+                        <a class="dropdown-item" href="#">자료실</a>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-warning font-weight-bold" style="color:#1A3359;">참여하기</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-view></div>
+<footer>
+    <div class="card border" style="background-color:#EEEEEE;">
+        <div class="card-body">
+            <button type="button" class="btn" style="background-color:#EEEEEE;">
+                <a ng-href="#" style="color:black;">패밀리 사이트
+                </a>
+            </button>
+            <button type="button" class="btn" style="background-color:#EEEEEE;">
+                <a ng-href="#" style="color:black;">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+            </button>
+            <button type="button" class="btn" style="float:right;background-color:#EEEEEE;">
+                <a ng-href="#" style="color:black;">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </button>
+        </div>
+    </div>
+    <div class="card border" style="background-color:#484848;">
+        <div style="display:inline-block;">
+            <button type="button" class="btn" style="background-color:#484848;">
+                <a ng-href="#" class="text-white">이용약관개인정보취급방침</a>
+            </button>
+            <button type="button" class="btn" style="background-color:#484848;">
+                <a ng-href="#" class="text-white">이메일무단수집거부</a>
+            </button>
+            <button type="button" class="btn" style="background-color:#484848;">
+                <a ng-href="#" class="text-white">위치/연락처</a>
+            </button>
+            <button type="button" class="btn" style="background-color:#484848;">
+                <a ng-href="#" class="text-white">이용안내</a>
+            </button>
+            <button type="button" class="btn" style="float:right; background-color:#484848;">
+                <a ng-href="#" class="text-white">전체메뉴</a>
+            </button>
+            <div class="input-group" style="max-width:275px;float:right;">
+                <input type="text" class="form-control" placeholder="검색어를 이렵해주세요." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn" type="button" style="border:50px;background-color:white;"> <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border" style="background-color:#616161;">
+        <div class="card-body">
+            <div style="display:inline-block">
+                <h5 class="text-white">홈페이지 알림</h5>
+                <p style="color:lightgrey">[공지]2017년5/16,00시 ...</p>
+                <p style="color:lightgrey">[공지]기아대책 홈페이지 최적화를 위한 참고
+                    <button class="btn" style="background-color:#484848;">
+                        <a ng-href="#" class="text-white">질문하기</a>
+                    </button>
+                </p>
+
+                <h5 class="text-white" style="padding-top:1%;">주소</h5>
+                <p style="color:lightgrey">서울시종로구 대학로 136 4층</p>
+                <p style="color:lightgrey">헬핑핸즈는 예수 그리스도 후기성도 교회에서 운영하는 범세계적인 자원봉사 단체입니다.</p>
+            </div>
+            <div style="display:inline-block; float:right;">
+                <h5 class="text-white">문의안내</h5>
+                <p style="color:lightgrey">대표전화 02-000-0000 대표전화02-000-0000</p>
+                <p style="color:lightgrey;">운영시간 오전9:00~오후06:00(토/공휴일휴모)</p>
+                <br>
+                <h5 class="text-white">SNS</h5>
+                <div style="color:white;">
+                    <button class="btn snsButtons">
+                        <a ng-href="https://www.blogger.com" class="snsStyle">
+                            <i class="fab fa-blogger"></i></a>
+                    </button>
+                    <button class="btn snsButtons">
+                        <a ng-href="https://www.facebook.com/helpinghandskor/" class="snsStyle">
+                            <i class="fab fa-facebook-f">
+
+                            </i>
+                        </a>
+                    </button>
+
+                    <button class="btn snsButtons">
+                        <a ng-href="http://www.instagram.com" class="snsStyle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </button>
+                    <button class="btn snsButtons">
+                        <a ng-href="http://www.twitter.com" class="snsStyle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </button>
+                    <button class="btn snsButtons">
+                        <a ng-href="http://www.youtube.com" class="snsStyle">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>-->
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+<!-- Bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
