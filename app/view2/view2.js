@@ -16,7 +16,7 @@ function View2Ctrl($scope, $http) {
     $scope.submit = function () {
         console.log('clicked submit');
         $http({
-            url: 'http://localhost:8080/blah',
+            url: 'http://localhost:8080/english-connect-program-sign-up',
             method: 'POST',
             data: $scope.data
         }).then(function (httpResponse) {

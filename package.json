@@ -33,8 +33,10 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bson-ext": "^2.0.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "kerberos": "0.0.23",
     "mongodb": "^3.1.0-beta4",
     "mongoose": "^5.1.2"
   }
