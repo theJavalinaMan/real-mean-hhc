@@ -14,10 +14,13 @@
 @include fluid-type(font-size, 600px, 1200px, 16px, 32px);
 }
 @media screen and (max-width: 600px) {
-  .shrinkVideoTitle {
+  .shrinkH1 {
     font-size: 16px;
   }
-    .shrinkVideoSubTitle{
+    .shrinkVideoTitle{
+        font-size:16px;
+    }
+    .shrinkH5{
         font-size:10px;
     }
     .shrinkButtonText{
@@ -29,10 +32,13 @@
     }
 }
 @media screen and (min-width: 1200px) {
-  .shrinkVideoTitle {
-    font-size: 36px;
+    .shrinkVideoTitle{
+        font-size:72px;
+    }
+  .shrinkH1 {
+    font-size: 48px;
   }
-    .shrinkVideoSubTitle{
+    .shrinkH5{
         font-size:24px;
     }
     .shrinkButtonText{
@@ -74,3 +80,6 @@
 .formRows{
     padding:15px;
 }
+/*.middleRowCards{*/
+    /*max-height:350px;*/
+/*}*/

@@ -23,6 +23,7 @@ app.post('/english-connect-program-sign-up', function(req, res){
             if (err) throw err;
             console.log("1 document inserted");
             db.close();
+
         });
     });
 });
